@@ -3,11 +3,12 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Repowering Partners</title>
+  <title>Repowering Partners — Own. Remodel. Profit.</title>
   <link rel="icon" type="image/svg+xml" href="favicon.svg" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="css/styles.css" />
 </head>
 <body>
@@ -20,52 +21,132 @@
       <img src="favicon.svg" alt="" class="navbar__logo" width="24" height="24" />
       Repowering <span>Partners</span>
     </a>
-    <button class="navbar__toggle" type="button" aria-label="Toggle navigation">
+    <button
+      class="navbar__toggle"
+      type="button"
+      aria-label="Toggle navigation"
+      aria-expanded="false"
+      aria-controls="main-nav"
+    >
       <span class="navbar__toggle-bar"></span>
       <span class="navbar__toggle-bar"></span>
       <span class="navbar__toggle-bar"></span>
     </button>
-    <nav class="navbar__nav" id="main-nav">
-      <!-- Cleaned up list: No dots, no extra button outside the list -->
+    <nav class="navbar__nav" id="main-nav" aria-label="Main navigation">
       <ul class="navbar__links">
         <li><a href="index.html">Product</a></li>
         <li><a href="about.html">About</a></li>
         <li><a href="contact.html">Contact</a></li>
       </ul>
+      <a href="contact.html" class="btn btn--nav">Contact</a>
     </nav>
   </header>
 
   <main>
     <section class="hero hero--home">
-      <div class="container">
-        <span class="hero__badge animate-in">The Solar Upgrade Platform</span>
-        <h1 class="hero__title animate-in animate-in--delay-1">
-          Turn aging assets into <br />
-          <span>long-term revenue.</span>
-        </h1>
-        <p class="hero__subtitle animate-in animate-in--delay-2">
-          We acquire, upgrade, and operate solar farms. Maximizing efficiency 
-          through modern technology and strategic repowering.
+      <div class="container container--narrow">
+        <h1 class="hero__title animate-in">The solar development system for teams and partners.</h1>
+        <p class="hero__subtitle animate-in animate-in--delay-1">
+          Structure, acquire, and operate solar farms with a single partner—Repowering Partners handles diligence, upgrades, and long-term operations.
         </p>
-        <div class="hero__cta animate-in animate-in--delay-2">
-          <a href="contact.html" class="btn btn--primary">Partner with us</a>
+        <div class="hero__cta">
+          <a href="contact.html" class="btn btn--primary animate-in animate-in--delay-2">Talk to our team</a>
+          <a href="about.html" class="hero__link animate-in animate-in--delay-2">Learn how we work &rarr;</a>
         </div>
       </div>
     </section>
 
-    <!-- Example Product Preview Section -->
+    <section class="product-preview">
+      <div class="container container--wide">
+        <div class="product-preview__frame animate-on-scroll">
+          <img src="https://images.unsplash.com/photo-1508514177221-188b1cf16e9d?w=1400&q=85" alt="Solar farm installation" class="product-preview__img" decoding="async" />
+          <div class="product-preview__overlay">
+            <div class="product-preview__caption">
+              <span class="product-preview__badge">Portfolio</span>
+              <strong>Acquire. Remodel. Operate.</strong> — Real assets, transparent returns.
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--alt">
+      <div class="container">
+        <h2 class="section-title animate-on-scroll">Why partner with us</h2>
+        <p class="section-subtitle animate-on-scroll animate-on-scroll--delay-1">We focus on ownership, efficiency, and transparent returns.</p>
+        <div class="image-row">
+          <figure class="image-card animate-on-scroll animate-on-scroll--stagger-0">
+            <img src="https://images.unsplash.com/photo-1532601224476-15c79f2f7a51?w=900&q=85" alt="Solar panels in field" loading="lazy" decoding="async" />
+            <figcaption>Acquire &amp; own</figcaption>
+          </figure>
+          <figure class="image-card animate-on-scroll animate-on-scroll--stagger-1">
+            <img src="https://images.unsplash.com/photo-1509391366360-2e959784a276?w=900&q=85" alt="Solar infrastructure" loading="lazy" decoding="async" />
+            <figcaption>Remodel &amp; upgrade</figcaption>
+          </figure>
+          <figure class="image-card animate-on-scroll animate-on-scroll--stagger-2">
+            <img src="https://images.unsplash.com/photo-1508514177221-188b1cf16e9d?w=900&q=85" alt="Solar farm" loading="lazy" decoding="async" />
+            <figcaption>Long-term returns</figcaption>
+          </figure>
+        </div>
+        <div class="grid-3">
+          <div class="card feature-card animate-on-scroll animate-on-scroll--stagger-0">
+            <div class="feature-card__icon" aria-hidden="true">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><path d="M12 1v4M12 19v4M4.22 4.22l2.83 2.83M16.95 16.95l2.83 2.83M1 12h4M19 12h4M4.22 19.78l2.83-2.83M16.95 7.05l2.83-2.83"/></svg>
+            </div>
+            <h3>Acquire & own</h3>
+            <p>We identify and purchase solar farms with strong potential, so you own real assets—not just paper.</p>
+          </div>
+          <div class="card feature-card animate-on-scroll animate-on-scroll--stagger-1">
+            <div class="feature-card__icon" aria-hidden="true">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
+            </div>
+            <h3>Remodel & upgrade</h3>
+            <p>Older sites get modernized: better panels, storage, and grid integration for higher output and value.</p>
+          </div>
+          <div class="card feature-card animate-on-scroll animate-on-scroll--stagger-2">
+            <div class="feature-card__icon" aria-hidden="true">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3v18h18"/><path d="M18 9l-5 5-4-4-3 3"/></svg>
+            </div>
+            <h3>Self-profit focus</h3>
+            <p>Our model is built around ownership profit—revenue from generation and increased asset value over time.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <section class="section">
       <div class="container">
-        <div class="product-preview__frame animate-in animate-in--delay-2">
-           <img src="https://images.unsplash.com/photo-1509391366360-2e959784a276?w=1200&q=80" alt="Solar Farm" class="product-preview__img" style="width:100%; display:block;">
+        <h2 class="section-title animate-on-scroll">Built for serious investors</h2>
+        <p class="section-subtitle animate-on-scroll animate-on-scroll--delay-1">Transparent structure, clear economics, and a team that executes.</p>
+        <div class="grid-3">
+          <div class="card animate-on-scroll animate-on-scroll--stagger-0">
+            <h3 style="margin-top: 0;">Due diligence</h3>
+            <p style="color: var(--text-muted); margin: 0;">Rigorous site and financial analysis before every acquisition.</p>
+          </div>
+          <div class="card animate-on-scroll animate-on-scroll--stagger-1">
+            <h3 style="margin-top: 0;">Operational control</h3>
+            <p style="color: var(--text-muted); margin: 0;">We operate what we own—no passive handoffs or hidden fees.</p>
+          </div>
+          <div class="card animate-on-scroll animate-on-scroll--stagger-2">
+            <h3 style="margin-top: 0;">Long-term horizon</h3>
+            <p style="color: var(--text-muted); margin: 0;">Aligned with investors who think in decades, not quarters.</p>
+          </div>
         </div>
+      </div>
+    </section>
+
+    <section class="cta-strip">
+      <div class="container">
+        <h2 class="cta-strip__title animate-on-scroll">Ready to explore solar farm ownership?</h2>
+        <p class="cta-strip__text animate-on-scroll animate-on-scroll--delay-1">Tell us about your goals and we’ll show you how we can work together.</p>
+        <a href="contact.html" class="btn btn--primary animate-on-scroll animate-on-scroll--delay-2">Contact us</a>
       </div>
     </section>
   </main>
 
   <footer class="footer">
     <div class="container">
-      <p>&copy; 2024 Repowering Partners. All rights reserved. <a href="contact.html">Contact</a> | <a href="about.html">About</a></p>
+      <p>&copy; Repowering Partners. All rights reserved. <a href="contact.html">Contact</a> | <a href="about.html">About</a></p>
     </div>
   </footer>
 

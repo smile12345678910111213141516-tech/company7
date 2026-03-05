@@ -57,22 +57,4 @@
       el.classList.add('is-visible');
     });
   }
-  (function () {
-  // Navbar scroll effect
-  const navbar = document.querySelector('.navbar');
-  window.addEventListener('scroll', () => {
-    navbar.classList.toggle('scrolled', window.scrollY > 20);
-  });
-
-  // Mobile nav toggle
-  const nav = document.querySelector('.navbar__nav');
-  const toggle = document.querySelector('.navbar__toggle');
-  
-  if (nav && toggle) {
-    toggle.addEventListener('click', () => {
-      nav.classList.toggle('is-open');
-      // Simple animation for the hamburger bars could go here
-    });
-  }
-})();
 })();
