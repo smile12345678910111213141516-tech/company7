@@ -19,8 +19,22 @@
       (isHome && (href === '' || href === '/' || href === 'index.html')) ||
       (isAbout && href.indexOf('about') !== -1) ||
       (isContact && href.indexOf('contact') !== -1);
-    if (active) a.classList.add('active');
+    if (active) {
+      a.classList.add('active');
+      a.setAttribute('aria-current', 'page');
+    }
   });
+
+  // Mobile nav toggle
+  const nav = document.querySelector('.navbar__nav');
+  const toggle = document.querySelector('.navbar__toggle');
+  if (nav && toggle) {
+    toggle.addEventListener('click', function () {
+      const isOpen = nav.classList.toggle('is-open');
+      toggle.classList.toggle('navbar__toggle--open', isOpen);
+      toggle.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+    });
+  }
 
   // Scroll-triggered animations: reveal elements when they enter viewport
   const animated = document.querySelectorAll('.animate-on-scroll');
