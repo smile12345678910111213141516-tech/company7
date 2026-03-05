@@ -107,11 +107,20 @@ body {
 .navbar.scrolled { background: rgba(10, 22, 40, 0.95); }
 
 .navbar__brand {
-  font-size: 1.35rem;
+  font-size: 1.25rem;
   font-weight: 700;
   color: var(--text-primary);
   text-decoration: none;
   letter-spacing: 0.02em;
+}
+
+@media (max-width: 640px) {
+  .navbar { padding: 0.875rem 1.25rem; }
+  .navbar__brand { font-size: 1.1rem; }
+  .navbar__links { gap: 1.25rem; }
+  .hero { padding: 3rem 0 4rem; }
+  .section { padding: 3rem 0; }
+  .cta-strip { padding: 3rem 1rem; }
 }
 
 .navbar__brand span { color: var(--teal-glow); }
@@ -133,6 +142,12 @@ body {
 
 .navbar__links a:hover,
 .navbar__links a.active { color: var(--teal-glow); }
+
+.navbar__links a:focus-visible,
+.navbar__brand:focus-visible {
+  outline: 2px solid var(--teal-glow);
+  outline-offset: 4px;
+}
 
 /* ===== Main content area ===== */
 main {
@@ -181,6 +196,11 @@ main {
   transform: translateY(-2px);
 }
 
+.btn:focus-visible {
+  outline: 2px solid var(--teal-glow);
+  outline-offset: 3px;
+}
+
 /* ===== Cards ===== */
 .card {
   background: var(--card-bg);
@@ -198,10 +218,11 @@ main {
 
 /* ===== Section titles ===== */
 .section-title {
-  font-size: 2rem;
+  font-size: clamp(1.5rem, 3vw, 2rem);
   font-weight: 700;
   margin-bottom: 0.5rem;
   color: var(--text-primary);
+  letter-spacing: -0.02em;
 }
 
 .section-subtitle {
@@ -221,6 +242,8 @@ main {
 }
 
 .footer a { color: var(--teal-glow); text-decoration: none; }
+.footer a:hover { text-decoration: underline; }
+.footer a:focus-visible { outline: 2px solid var(--teal-glow); outline-offset: 2px; }
 
 /* ===== Hero ===== */
 .hero {
@@ -357,6 +380,9 @@ main {
 }
 
 .form-group textarea { min-height: 140px; resize: vertical; }
+
+.form-group input::placeholder,
+.form-group textarea::placeholder { color: var(--text-muted); opacity: 0.8; }
 
 .contact-info {
   margin-top: 2rem;
