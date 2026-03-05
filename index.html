@@ -4,6 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Repowering Partners — Own. Remodel. Profit.</title>
+  <link rel="icon" type="image/svg+xml" href="favicon.svg" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&display=swap" rel="stylesheet" />
@@ -15,28 +16,42 @@
   </div>
 
   <header class="navbar">
-    <a href="index.html" class="navbar__brand">Repowering <span>Partners</span></a>
-    <nav>
+    <a href="index.html" class="navbar__brand">
+      <img src="favicon.svg" alt="" class="navbar__logo" width="24" height="24" />
+      Repowering <span>Partners</span>
+    </a>
+    <nav class="navbar__nav">
       <ul class="navbar__links">
-        <li><a href="index.html">Home</a></li>
+        <li><a href="index.html">Product</a></li>
         <li><a href="about.html">About</a></li>
         <li><a href="contact.html">Contact</a></li>
       </ul>
+      <a href="contact.html" class="navbar__login">Log in</a>
+      <a href="contact.html" class="btn btn--nav">Sign up</a>
     </nav>
   </header>
 
   <main>
-    <section class="hero">
-      <div class="container">
-        <p class="hero__badge">Solar Farm Acquisition & Development</p>
-        <h1 class="hero__title">Own the future. <span>Remodel for profit.</span></h1>
+    <section class="hero hero--home">
+      <div class="container container--narrow">
+        <h1 class="hero__title">The solar development system for teams and partners.</h1>
         <p class="hero__subtitle">
-          Repowering Partners acquires solar farms, upgrades infrastructure, and operates them for long-term returns.
-          Join us in building a sustainable portfolio that works for you.
+          Purpose-built for acquiring, upgrading, and operating solar assets. Designed for long-term value.
         </p>
-        <div class="hero__cta">
-          <a href="contact.html" class="btn btn--primary">Get in touch</a>
-          <a href="about.html" class="btn btn--outline">Learn more</a>
+        <a href="about.html" class="hero__link">Learn how we work &rarr;</a>
+      </div>
+    </section>
+
+    <section class="product-preview">
+      <div class="container container--wide">
+        <div class="product-preview__frame">
+          <img src="https://images.unsplash.com/photo-1508514177221-188b1cf16e9d?w=1200&q=80" alt="Solar farm installation" class="product-preview__img" />
+          <div class="product-preview__overlay">
+            <div class="product-preview__caption">
+              <span class="product-preview__badge">Portfolio</span>
+              <strong>Acquire. Remodel. Operate.</strong> — Real assets, transparent returns.
+            </div>
+          </div>
         </div>
       </div>
     </section>
@@ -45,6 +60,20 @@
       <div class="container">
         <h2 class="section-title">Why partner with us</h2>
         <p class="section-subtitle">We focus on ownership, efficiency, and transparent returns.</p>
+        <div class="image-row">
+          <figure class="image-card">
+            <img src="https://images.unsplash.com/photo-1532601224476-15c79f2f7a51?w=600&q=80" alt="Solar panels in field" />
+            <figcaption>Acquire &amp; own</figcaption>
+          </figure>
+          <figure class="image-card">
+            <img src="https://images.unsplash.com/photo-1509391366360-2e959784a276?w=600&q=80" alt="Solar infrastructure" />
+            <figcaption>Remodel &amp; upgrade</figcaption>
+          </figure>
+          <figure class="image-card">
+            <img src="https://images.unsplash.com/photo-1508514177221-188b1cf16e9d?w=600&q=80" alt="Solar farm" />
+            <figcaption>Long-term returns</figcaption>
+          </figure>
+        </div>
         <div class="grid-3">
           <div class="card feature-card">
             <div class="feature-card__icon" aria-hidden="true">
