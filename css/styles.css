@@ -328,12 +328,21 @@ main {
   margin-bottom: 0.5rem;
   color: var(--text-primary);
   letter-spacing: -0.02em;
+  max-width: 40rem;
 }
 
 .section-subtitle {
   color: var(--text-muted);
   font-size: 1.1rem;
   margin-bottom: 2rem;
+  max-width: 40rem;
+}
+
+@media (min-width: 768px) {
+  .section-title,
+  .section-subtitle {
+    text-align: left;
+  }
 }
 
 /* ===== Footer ===== */
@@ -397,6 +406,20 @@ main {
   max-width: 560px;
   margin: 0 auto 1.5rem;
   line-height: 1.6;
+}
+
+@media (min-width: 768px) {
+  .hero {
+    text-align: left;
+  }
+
+  .hero__badge,
+  .hero__title,
+  .hero__subtitle,
+  .hero__link {
+    margin-left: 0;
+    margin-right: auto;
+  }
 }
 
 .hero__link {
