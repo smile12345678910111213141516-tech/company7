@@ -22,7 +22,7 @@
 html { scroll-behavior: smooth; }
 body {
   margin: 0;
-  font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+  font-family: 'DM Sans', 'Segoe UI', system-ui, -apple-system, sans-serif;
   background: var(--navy-deep);
   color: var(--text-primary);
   min-height: 100vh;
@@ -288,7 +288,12 @@ main {
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 1.5rem;
+  color: var(--navy-deep);
+}
+
+.feature-card__icon svg {
+  width: 28px;
+  height: 28px;
 }
 
 .feature-card h3 {
