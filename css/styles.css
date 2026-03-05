@@ -6,8 +6,8 @@
   --border: rgba(255, 255, 255, 0.08);
   --border-strong: rgba(255, 255, 255, 0.12);
   --card-border: var(--border);
-  --text-primary: #ffffff;
-  --text-muted: #a1a1a1;
+  --text-primary: #f8fffb;
+  --text-muted: #c1cec7;
   --accent: #e5e5e5;
   --accent-teal: #2d8b7a;
   --accent-teal-bright: #3dbda8;
@@ -27,6 +27,8 @@ body {
   color: var(--text-primary);
   min-height: 100vh;
   overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
 }
 
 /* Display typography for headings / brand */
@@ -36,6 +38,14 @@ h1, h2, h3,
 .cta-strip__title,
 .navbar__brand {
   font-family: 'Space Grotesk', system-ui, -apple-system, sans-serif;
+}
+
+/* Improve heading readability */
+.hero__title,
+.section-title,
+.cta-strip__title,
+.feature-card h3 {
+  text-shadow: 0 1px 12px rgba(0, 0, 0, 0.35);
 }
 
 /* ===== Animated starfield (moving stars) — kept as requested ===== */
@@ -51,7 +61,9 @@ h1, h2, h3,
   position: absolute;
   inset: 0;
   z-index: -1;
-  background: radial-gradient(ellipse 80% 50% at 50% 0%, rgba(40, 40, 40, 0.9) 0%, transparent 60%);
+  background:
+    radial-gradient(ellipse 85% 55% at 50% 0%, rgba(34, 98, 70, 0.55) 0%, rgba(20, 40, 30, 0.25) 48%, transparent 72%),
+    radial-gradient(ellipse 70% 45% at 85% 15%, rgba(61, 189, 168, 0.12) 0%, transparent 65%);
   pointer-events: none;
 }
 
@@ -146,16 +158,24 @@ h1, h2, h3,
   padding: 0;
 }
 
+.navbar__links li {
+  list-style: none;
+}
+
+.navbar__links li::marker {
+  content: '';
+}
+
 .navbar__links a {
-  color: var(--text-muted);
+  color: #c8d5ce;
   text-decoration: none;
   font-size: 0.9375rem;
-  font-weight: 500;
+  font-weight: 600;
   transition: color 0.22s ease;
 }
 
 .navbar__links a:hover,
-.navbar__links a.active { color: var(--text-primary); }
+.navbar__links a.active { color: #ffffff; }
 
 .btn--nav {
   padding: 0.5rem 1rem;
@@ -181,6 +201,11 @@ h1, h2, h3,
 .navbar__brand:focus-visible {
   outline: 2px solid var(--accent-teal-bright);
   outline-offset: 3px;
+}
+
+/* Hide unstyled toggle button that can appear as a white dot */
+.navbar__toggle {
+  display: none;
 }
 
 @media (max-width: 768px) {
@@ -690,7 +715,6 @@ main {
   margin: 0.5rem 0;
   color: var(--text-muted);
 }
-
 
 /* ===== About content ===== */
 .about-hero-image {
