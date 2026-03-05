@@ -21,4 +21,26 @@
       (isContact && href.indexOf('contact') !== -1);
     if (active) a.classList.add('active');
   });
+
+  // Scroll-triggered animations: reveal elements when they enter viewport
+  const animated = document.querySelectorAll('.animate-on-scroll');
+  if (animated.length && 'IntersectionObserver' in window) {
+    const observer = new IntersectionObserver(
+      function (entries) {
+        entries.forEach(function (entry) {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('is-visible');
+          }
+        });
+      },
+      { rootMargin: '0px 0px -60px 0px', threshold: 0.1 }
+    );
+    animated.forEach(function (el) {
+      observer.observe(el);
+    });
+  } else {
+    animated.forEach(function (el) {
+      el.classList.add('is-visible');
+    });
+  }
 })();
