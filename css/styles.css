@@ -580,18 +580,22 @@ main {
 }
 
 .about-page .about-feature-image {
-  margin: 0;
+  margin: 0 auto;
+  max-width: 980px;
   border: 1px solid var(--border);
   border-radius: 12px;
   overflow: hidden;
   box-shadow: 0 16px 34px rgba(0, 0, 0, 0.3);
+  background: rgba(0, 0, 0, 0.2);
 }
 
+/* FIX: full image visible on desktop and mobile */
 .about-page .about-feature-image img {
   display: block;
   width: 100%;
-  height: clamp(220px, 34vw, 390px);
-  object-fit: cover;
+  height: auto;
+  object-fit: contain;
+  object-position: center center;
 }
 
 @media (max-width: 1024px) {
@@ -635,20 +639,4 @@ main {
   .about-page .about-hero__panel {
     padding: 1rem;
   }
-}
-.about-page .about-feature-image {
-  margin: 0 auto;
-  max-width: 980px;
-  border: 1px solid var(--border);
-  border-radius: 12px;
-  overflow: hidden;
-  box-shadow: 0 16px 34px rgba(0, 0, 0, 0.3);
-  background: rgba(0, 0, 0, 0.2);
-}
-
-.about-page .about-feature-image img {
-  display: block;
-  width: 100%;
-  height: auto;      /* shows full image */
-  object-fit: contain;
 }
