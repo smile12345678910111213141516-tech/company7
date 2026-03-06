@@ -7,36 +7,30 @@
     });
   }
 
-  // Set active nav link based on current page (works with file:// and http(s)://)
-  const path = (window.location.pathname || window.location.href).replace(/\/$/, '');
-  const isHome = !path || path === '' || path.endsWith('index.html') || path.endsWith('/');
-  const isAbout = path.indexOf('about') !== -1;
-  const isContact = path.indexOf('contact') !== -1;
+  // Active nav states
+  const path = (window.location.pathname || window.location.href).toLowerCase().replace(/\/$/, '');
+  const isHome = !path || path.endsWith('index.html') || path.endsWith('/');
+  const isAbout = path.includes('about');
+  const isContact = path.includes('contact');
 
   document.querySelectorAll('.navbar__links a').forEach(function (a) {
     const href = (a.getAttribute('href') || '').toLowerCase();
     const active =
       (isHome && (href === '' || href === '/' || href === 'index.html')) ||
-      (isAbout && href.indexOf('about') !== -1) ||
-      (isContact && href.indexOf('contact') !== -1);
+      (isAbout && href.includes('about'));
     if (active) {
       a.classList.add('active');
       a.setAttribute('aria-current', 'page');
     }
   });
 
-  // Mobile nav toggle
-  const nav = document.querySelector('.navbar__nav');
-  const toggle = document.querySelector('.navbar__toggle');
-  if (nav && toggle) {
-    toggle.addEventListener('click', function () {
-      const isOpen = nav.classList.toggle('is-open');
-      toggle.classList.toggle('navbar__toggle--open', isOpen);
-      toggle.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
-    });
+  const contactBtn = document.querySelector('.btn--nav[href*="contact"]');
+  if (contactBtn && isContact) {
+    contactBtn.classList.add('active');
+    contactBtn.setAttribute('aria-current', 'page');
   }
 
-  // Scroll-triggered animations: reveal elements when they enter viewport
+  // Scroll-triggered reveal
   const animated = document.querySelectorAll('.animate-on-scroll');
   if (animated.length && 'IntersectionObserver' in window) {
     const observer = new IntersectionObserver(
@@ -47,8 +41,9 @@
           }
         });
       },
-      { rootMargin: '0px 0px -60px 0px', threshold: 0.1 }
+      { rootMargin: '0px 0px -50px 0px', threshold: 0.1 }
     );
+
     animated.forEach(function (el) {
       observer.observe(el);
     });
