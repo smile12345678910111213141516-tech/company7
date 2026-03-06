@@ -778,3 +778,96 @@ main {
 .values-list li { border-bottom-color: var(--border); }
 
 .contact-info a { color: var(--accent-teal-bright); }
+/* ===== Compact spacing pass (reduces excess whitespace) ===== */
+
+/* Main page flow */
+main {
+  padding-top: 72px;
+  padding-bottom: 2rem;
+}
+
+/* Navbar */
+.navbar {
+  padding: 0.7rem 1.25rem;
+}
+.navbar__nav { gap: 1rem; }
+.navbar__links { gap: 1.1rem; }
+
+/* Hero */
+.hero {
+  padding: 2.5rem 0 3rem;
+}
+.hero--home {
+  padding: 3rem 0 2.5rem;
+}
+.hero__badge {
+  margin-bottom: 1rem;
+}
+.hero__title {
+  margin-bottom: 0.7rem;
+}
+.hero__subtitle {
+  margin-bottom: 1rem;
+  line-height: 1.5;
+}
+.hero__cta {
+  gap: 0.75rem;
+}
+
+/* Sections */
+.section {
+  padding: 2.5rem 0;
+}
+.section-title {
+  margin-bottom: 0.35rem;
+}
+.section-subtitle {
+  margin-bottom: 1.25rem;
+}
+
+/* Product preview + rows */
+.product-preview {
+  padding: 0 0 3rem;
+}
+.image-row {
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+.grid-3 {
+  gap: 1rem;
+}
+
+/* Cards and content blocks */
+.card {
+  padding: 1.25rem;
+}
+.about-hero-image {
+  margin: 0 auto 1.5rem;
+}
+.about-intro {
+  margin: 0 auto 2rem;
+  line-height: 1.6;
+}
+.values-list li {
+  padding: 0.75rem 0;
+}
+
+/* CTA + footer */
+.cta-strip {
+  padding: 2.5rem 1.25rem;
+}
+.cta-strip__text {
+  margin-bottom: 1rem;
+}
+.footer {
+  padding: 1.25rem 1rem;
+}
+
+/* Mobile: tighten a bit more */
+@media (max-width: 768px) {
+  .hero { padding: 2rem 0 2.25rem; }
+  .hero--home { padding: 2.25rem 0 2rem; }
+  .section { padding: 2rem 0; }
+  .cta-strip { padding: 2rem 1rem; }
+  .container { padding: 0 1rem; }
+}
